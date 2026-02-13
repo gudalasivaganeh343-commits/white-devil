@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BrandCraft - AI Branding System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎨 BrandCraft</h1>
+        <p>Generative AI–Powered Branding Automation System</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('brand')">Brand Name</button>
+        <button onclick="showSection('logo')">Logo Idea</button>
+        <button onclick="showSection('content')">Marketing Content</button>
+        <button onclick="showSection('sentiment')">Sentiment Analysis</button>
+        <button onclick="showSection('chat')">Brand Assistant</button>
+    </nav>
+
+    <main>
+
+        <!-- Brand Name Generator -->
+        <section id="brand" class="section">
+            <h2>✨ Brand Name Generator</h2>
+            <input type="text" id="industry" placeholder="Enter Industry">
+            <input type="text" id="keywords" placeholder="Enter Keywords">
+            <select id="tone">
+                <option>Modern</option>
+                <option>Luxury</option>
+                <option>Playful</option>
+                <option>Professional</option>
+            </select>
+            <button onclick="generateBrand()">Generate</button>
+            <div class="output" id="brandOutput"></div>
+        </section>
+
+        <!-- Logo Generator -->
+        <section id="logo" class="section hidden">
+            <h2>🎨 Logo Concept Generator</h2>
+            <input type="text" id="brandName" placeholder="Brand Name">
+            <input type="text" id="logoIndustry" placeholder="Industry">
+            <input type="text" id="logoKeywords" placeholder="Keywords">
+            <button onclick="generateLogo()">Generate</button>
+            <div class="output" id="logoOutput"></div>
+        </section>
+
+        <!-- Content Generator -->
+        <section id="content" class="section hidden">
+            <h2>📢 Marketing Content Generator</h2>
+            <textarea id="description" placeholder="Enter Brand Description"></textarea>
+            <select id="contentType">
+                <option>Product Description</option>
+                <option>Instagram Caption</option>
+                <option>Ad Copy</option>
+                <option>Email Marketing</option>
+            </select>
+            <button onclick="generateContent()">Generate</button>
+            <div class="output" id="contentOutput"></div>
+        </section>
+
+        <!-- Sentiment Analysis -->
+        <section id="sentiment" class="section hidden">
+            <h2>📊 Sentiment Analysis</h2>
+            <textarea id="review" placeholder="Enter Customer Review"></textarea>
+            <button onclick="analyzeSentiment()">Analyze</button>
+            <div class="output" id="sentimentOutput"></div>
+        </section>
+
+        <!-- Branding Assistant -->
+        <section id="chat" class="section hidden">
+            <h2>🤖 Branding Assistant</h2>
+            <textarea id="chatInput" placeholder="Ask branding question..."></textarea>
+            <button onclick="askAI()">Ask AI</button>
+            <div class="output" id="chatOutput"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
